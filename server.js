@@ -1,9 +1,15 @@
+//Dependency
 const express = require('express');
 
+//Setup app to use express
+const app = express();
+
+//Routes
 const htmlRoutes = require('./routes/htmlRoutes');
 const apiRoutes = require('./routes/apiRoutes');
+
+//Setup port
 const PORT = process.env.PORT || 3001;
-const app = express();
 
 //parse incoming data
 app.use(express.urlencoded( { extended: true }));
