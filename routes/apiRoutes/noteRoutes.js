@@ -1,10 +1,10 @@
 const router = require('express').Router();
 const path = require ('path');
 const fs = require ('fs');
-//npm function for creating a unique ID 
+//npm package for creating a unique ID 
 const uniqueID = require ('uniqid');
 
-//Display created notes
+//Display notes from db
 router.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, '../../db/db.json'));
 });
